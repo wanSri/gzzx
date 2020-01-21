@@ -147,7 +147,7 @@ class EqupmentListView(APIView):
         queryset = Equipment.objects.all()
         pg = PageNumberPagination()
         equips = pg.paginate_queryset(queryset=queryset, request=request, view=self)
-        ser = zxserializer.EquipSerializer(instance=queryset, many=True)
+        ser = zxserializer.EquipSerializer(instance=equips, many=True)
         return Response({
             'code': 200,
             'data': ser.data,

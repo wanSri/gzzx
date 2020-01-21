@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'gzzx.wsgi.application'
 REST_FRAMEWORK = {
     # 分页
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 15,
+    'PAGE_SIZE': 10,
 }
 
 DATABASES = {
